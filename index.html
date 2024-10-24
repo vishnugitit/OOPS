@@ -1,11 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="oops.css" />
-    <title>OOPS</title>
-  </head>
-  <body></body>
-  <script src="oops.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="./thar.webp" alt="Mahindra" width="400px" height="400px">
+    <img src="./signa.jpg" alt="TATA" width="400px" height="400px">
+    <video >
+       <source src="">
+    </video>
+</body>
+<script>
+    class Vehicle {
+        brand;
+        model;
+        year;
+        constructor(brand, model, year) {
+            this.brand = brand;
+            this.model = model;
+            this.year = year;
+        }
+    }
+    class Car extends Vehicle {
+        color;
+        engine;
+        speed;
+        constructor(model, brand, year, color, engine, speed) {
+            super(brand, model, year);
+            this.color = color;
+            this.engine = engine;
+            this.speed = speed;
+        }
+        startEngine() {
+            console.log(
+                " Welcome " +
+                this.brand +
+                this.model +
+                " Launched on " +
+                this.year +
+                " color is " +
+                this.color +
+                " Engine capacity is " +
+                this.engine
+            );
+            return this.model;
+        }
+        accelerate() {
+            console.log(
+                " Welcome " +
+                this.brand +
+                this.model +
+                " Launched on " +
+                this.year +
+                this.year +
+                " color is " +
+                this.color +
+                " Engine capacity is " +
+                this.engine +
+                " Top speed is " +
+                this.speed
+            );
+            return this.model;
+        }
+    }
+    class Truck extends Vehicle {
+        color;
+        engine;
+        speed;
+        constructor(model, brand, year, color, engine, speed) {
+            super(brand, model, year);
+            this.color = color;
+            this.engine = engine;
+            this.speed = speed;
+        }
+        
+        startEngine() {
+            console.log(
+                " Welcome " +
+                this.brand +
+                this.model +
+                " Launched on " +
+                this.year +
+                " color is " +
+                this.color +
+                " Engine capacity is " +
+                this.engine
+            );
+            return this.model;
+           
+        }
+        accelerate() {
+            console.log(
+                " Welcome " +
+                this.brand +
+                this.model +
+                " Launched on " +
+                this.year +
+                this.year +
+                " color is " +
+                this.color +
+                " Engine capacity is " +
+                this.engine +
+                " Top speed is " +
+                this.speed
+            );
+            return this.model;
+           
+        }
+    }
+
+    let car = new Car(
+        "Mahindra",
+        "Thar Roxx",
+        "2024",
+        "red",
+        "2188 CC",
+        "155km"
+    );
+    let truck = new Truck(
+        "TATA",
+        "Signa",
+        "2016",
+        "white",
+        "4018 CC",
+        " 80km"
+    );
+    // console.log(car);
+    console.log(car.startEngine());
+    console.log(car.accelerate());
+    // console.log(truck);
+    console.log(truck.startEngine());
+    console.log(truck.accelerate());
+</script>
+
 </html>
