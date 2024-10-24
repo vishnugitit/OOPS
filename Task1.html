@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Mahindra Thar</h1>
+    <img src="./thar.webp" alt="Mahindra" width="400px" height="300px" />
+    <h1>TATA Signa</h1>
+    <img src="./signa.jpg" alt="TATA" width="400px" height="300px" />
+    <p>To view the result click on the console</p>
+  </body>
+  <script>
+    // Base class
+    class Vehicle {
+      brand;
+      model;
+      year;
+      constructor(brand, model, year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+      }
+    }
+    // inheriting properties and methods from Vehicle
+    class Car extends Vehicle {
+      color;
+      engine;
+      speed;
+      constructor(model, brand, year, color, engine, speed) {
+        super(brand, model, year);
+        this.color = color;
+        this.engine = engine;
+        this.speed = speed;
+      }
+      // Methods
+      startEngine() {
+        console.log(
+          " Welcome " +
+            this.model +
+            " " +
+            this.brand +
+            " Launched on " +
+            this.year +
+            " color is " +
+            this.color +
+            " Engine capacity is " +
+            this.engine
+        );
+        return this.model;
+      }
+      // Methods
+      accelerate() {
+        console.log(
+          " Welcome " +
+            this.model +
+            " " +
+            this.brand +
+            " Launched on " +
+            this.year +
+            this.year +
+            " color is " +
+            this.color +
+            " Engine capacity is " +
+            this.engine +
+            " Top speed is " +
+            this.speed
+        );
+        return this.model;
+      }
+    }
+    // inheriting properties and methods from Vehicle
+    class Truck extends Vehicle {
+      color;
+      engine;
+      speed;
+      constructor(model, brand, year, color, engine, speed) {
+        super(brand, model, year);
+        this.color = color;
+        this.engine = engine;
+        this.speed = speed;
+      }
+      // Methods
+      startEngine() {
+        console.log(
+          " Welcome " +
+            this.model +
+            " " +
+            this.brand +
+            " Launched on " +
+            this.year +
+            " color is " +
+            this.color +
+            " Engine capacity is " +
+            this.engine
+        );
+        return this.model;
+      }
+      // Methods
+      accelerate() {
+        console.log(
+          " Welcome " +
+            this.model +
+            " " +
+            this.brand +
+            " Launched on " +
+            this.year +
+            this.year +
+            " color is " +
+            this.color +
+            " Engine capacity is " +
+            this.engine +
+            " Top speed is " +
+            this.speed
+        );
+        return this.model;
+      }
+    }
+    // Car subclass
+    let car = new Car(
+      // properties
+      "Mahindra",
+      "Thar Roxx",
+      "2024",
+      "red",
+      "2188 CC",
+      "155km"
+    );
+    // Truck subclass
+    let truck = new Truck(
+      // properties
+      "TATA",
+      "Signa",
+      "2016",
+      "white",
+      "4018 CC",
+      " 80km"
+    );
+    // console.log(car);
+    console.log(car.startEngine());
+    console.log(car.accelerate());
+    // console.log(truck);
+    console.log(truck.startEngine());
+    console.log(truck.accelerate());
+  </script>
+</html>
