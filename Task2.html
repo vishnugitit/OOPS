@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Private Fields</title>
+  </head>
+  <body></body>
+  <script>
+
+    // BankAccount
+    class BankAccount {
+      #balance;
+      #accountNumber;
+
+      constructor(balance, accountNumber) {
+        this.#balance = balance;
+        this.#accountNumber = accountNumber;
+      }
+
+    //   getters balance
+      get getbalance() {
+        return this.#balance;
+      }
+
+    //   setters balance
+      set setbalance(balance) {
+        this.#balance = balance;
+      }
+
+    //   getters accountNumber
+      get getaccountNumber() {
+        return this.#accountNumber;
+      }
+
+    //   Setters AccountNumber
+      set setaccountNumber(accountNumber) {
+        this.#accountNumber = accountNumber;
+      }
+
+    //   Deposit
+      deposit(amount,balance) {
+        return amount+balance;
+      }
+
+    //   Withdraw
+      withdraw(amount, balance) {
+        return amount - balance;
+      }
+
+// Balance
+      getBalance() {
+        return this.#balance;
+      }
+    }
+
+// Bank
+    let bank = new BankAccount(300000, 10987654321);
+    // Account Balance
+    console.log(" Account Balance is "+bank.getbalance);
+
+    // Setter Account Balance
+    bank.setbalance = 500000;
+    console.log(" Setter Account Balance is "+bank.getbalance);
+
+// Account Nummber
+    console.log(" Bank AccountNumber is "+bank.getaccountNumber);
+
+// Setter Account Nummber
+    bank.setaccountNumber = 12345678910;
+    console.log(" Setter Bank Account Number "+bank.getaccountNumber);
+
+    // Balance
+    console.log(" Bank Balance is "+bank.getBalance());
+
+    // Withdraw
+    draw = bank.withdraw(200000, bank.getbalance);
+    console.log(" Bank Withdraw Amount is "+draw )
+  
+//   Deposit
+   amt= bank.deposit(200000,bank.getbalance);
+   console.log(" Bank Total Amount is "+amt)
+  </script>
+</html>
